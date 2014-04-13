@@ -97,5 +97,6 @@ cas Griglia::mostraagg()
 
 int Griglia::exs(unsigned x, unsigned y)
 {
+	if (x>=dim || y>=dim) return 0;
 	return gri[x][y];
 }
