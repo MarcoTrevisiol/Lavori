@@ -6,6 +6,8 @@
 
 using namespace std;
 
+#define prob1r2	4
+
 class Motore
 {
 	private:

@@ -20,7 +20,7 @@ void Motore::settile()
 		a.x = rand()%dim;
 		a.y = rand()%dim;
 	} while (g->exs(a.x,a.y));
-	a.c = rand()%5/4+1;
+	a.c = rand()%(prob1r2+1)/(prob1r2)+1;
 }
 
 void Motore::muovi(mossa m)
