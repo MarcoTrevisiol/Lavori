@@ -17,14 +17,14 @@ void IA::settagriglia(Griglia * gr)
 		p = gr;
 }
 
-float IA::val()
+float IA::val(Griglia * g)
 {
-	if (p==0) return 0;
+	if (g==0) return 0;
 	int c = 0;
 	unsigned i,j;
 	for (i=0; i<dim; i++)
 		for (j=0; j<dim; j++)
-			if (p->exs(i,j)==0)
+			if (g->exs(i,j)==0)
 				c++;
 	return c;
 }
