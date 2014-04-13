@@ -11,6 +11,7 @@ Motore::Motore(Griglia * gr)
 	g->add(a);
 	settile();
 	g->add(a);
+	tizio = 0;
 }
 
 void Motore::settile()
@@ -39,4 +40,19 @@ void Motore::stampa()
 			cout<<g->exs(i,j)<<' ';
 		cout<<'\n';
 	}
+}
+
+void Motore::settaTizio()
+{
+	if (tizio!=0) delete tizio;
+	tizio = new IA;
+	tizio->settagriglia(g);
+}
+
+void Motore::muoviTizio()
+{
+	if (tizio==0) return;
+	g->muovi(tizio->bestmove());
+	settile();
+	g->add(a);
 }
