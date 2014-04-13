@@ -1,18 +1,36 @@
 #include "griglia.h"
 
-Griglia::Griglia()
+Griglia::Griglia(Griglia *gr)
 {
+	
+	
 	int i,j;
-	for (i=0; i<dim; i++)
+	if (gr==0)
 	{
-		for (j=0; j<dim; j++)
+		for (i=0; i<dim; i++)
 		{
-			gri[i][j]=0;
+			for (j=0; j<dim; j++)
+			{
+				gri[i][j]=0;
+			}
 		}
+		ladd.x=0;
+		ladd.y=0;
+		ladd.c=0;
 	}
-	ladd.x=0;
-	ladd.y=0;
-	ladd.c=0;
+	else
+	{
+		for (i=0; i<dim; i++)
+		{
+			for (j=0; j<dim; j++)
+			{
+				gri[i][j]=gr->gri[i][j];
+			}
+		}
+		ladd.x=gr->ladd.x;
+		ladd.y=gr->ladd.y;
+		ladd.c=gr->ladd.c;
+	}
 }
 
 unsigned sc(unsigned x, bool s)
@@ -81,13 +99,13 @@ void Griglia::muovi(mossa m)
 
 void Griglia::add(cas a)
 {
-	if (gri[a.x][a.y]==0)
-	{
+	//if (gri[a.x][a.y]==0)
+	//{
 		gri[a.x][a.y]=a.c;
 		ladd.c=a.c;
 		ladd.x=a.x;
 		ladd.y=a.y;
-	}
+	//}
 }
 
 cas Griglia::mostraagg()

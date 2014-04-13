@@ -16,7 +16,7 @@ class Griglia
 		unsigned gri[dim][dim];
 		cas ladd;
 	public:
-		Griglia();
+		Griglia(Griglia *gr=0);
 		void muovi(mossa m);
 		void add(cas a);
 		cas mostraagg();
