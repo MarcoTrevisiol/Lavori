@@ -20,6 +20,7 @@ public:
     ~MainWindow();
 
     void AddActor(typeAct t);
+
     
 private:
     Ui::MainWindow *ui;

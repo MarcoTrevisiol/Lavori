@@ -12,9 +12,9 @@ MainWindow::MainWindow(QWidget *parent) :
     scene.addRect(0,0,100,100);
 
     srand(time(0));
-    AddActor(nul);
-    AddActor(nul);
-    AddActor(nul);
+    for (int i=0; i<10; i++)
+        AddActor(nul);
+
 }
 
 MainWindow::~MainWindow()

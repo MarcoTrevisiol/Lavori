@@ -10,6 +10,6 @@ using namespace std;
 class BasicActor;
 class Field;
 
-enum typeAct { nul };
+enum typeAct { nul, aball };
 
 #endif // MAINHEAD_H

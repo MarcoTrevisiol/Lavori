@@ -10,6 +10,8 @@ public:
 
     BasicActor* AddActor(typeAct t);
 
+    list<BasicActor>::iterator it;
+
 private:
     list<BasicActor> actors;
 };

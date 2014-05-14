@@ -1,4 +1,5 @@
 #include "basicactor.h"
+#include <fstream>
 
 BasicActor::BasicActor(Field* pt)
 {
